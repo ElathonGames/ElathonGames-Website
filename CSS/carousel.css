@@ -1,0 +1,157 @@
+/* The wrapper of the slides and the arrows */
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The element that contains the slides */
+.slides-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+/* The generic arrow used to scroll between slides */
+.slide-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 1rem;
+  height: 5rem;
+  width: 5rem;
+  border: solid .3rem var(--electric-violet);
+  border-radius: 50%;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0.5;
+  background: transparent;
+  color: var(--electric-violet);
+  transition: opacity 100ms, box-shadow 100ms;
+}
+
+/* The status of the button on a certain event */
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+  box-shadow: 0 0 1rem var(--electric-violet);
+}
+
+/* The previous slide button */
+#slide-arrow-prev {
+  left: 5%;
+}
+
+/* The next slide button */
+#slide-arrow-next {
+  right: 5%;
+}
+
+/* The slide item that contains the slide elements */
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+/* The container of that contains the app logo and info */
+.app-item-container {
+  display: flex;
+  gap: 2.5em;
+  font-size: 1.5rem;
+  width: min(70%, 70rem);
+}
+
+/* The different sections that represent the app */
+.app-item-container > div {
+  background: var(--white);
+  padding: 1em;
+  border-radius: .5em;
+}
+
+/* The section that contains the logo and the store buttons */
+.app-item-container .app-item-logo {
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  aspect-ratio: 1;
+}
+
+/* The logo of the app */
+.app-item-container .app-item-logo img {
+  border-radius: .25em;
+}
+
+/* The container that contains the title and the buttons container */
+.app-item-container .app-item-logo .app-item-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .35em;
+}
+
+/* The container that contains the different buttons */
+.app-item-container .app-item-logo .store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
+}
+
+/* The store button icon */
+.app-item-container .app-item-logo .store-buttons i {
+  position: relative;
+  padding: .5em .8em;
+  color: var(--white);
+  border-radius: .25em;
+  transition: transform 100ms;
+}
+
+/* The store button icon */
+.app-item-container .app-item-logo .store-buttons i:hover {
+  transform: rotateZ(-2deg);
+}
+
+.app-item-container .app-item-logo .store-buttons i:hover:before {
+  left: -3rem;
+  border-radius: .25em 0 0 .25em;
+}
+
+/* Removing the a tag of the store buttons default propreties */
+.app-item-container .app-item-logo .store-buttons a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/* The first button icon (Play Store) */
+.app-item-container .app-item-logo .store-buttons i:first-of-type {
+  background: var(--play-store-bg);
+}
+
+/* The second button icon (Apple Store) */
+.app-item-container .app-item-logo .store-buttons i:nth-of-type(2) {
+  background: var(--apple-store-bg);
+}
+
+/* The container that contains the name and the description of the app */
+.app-item-container .app-item-info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+}
+
+/* The name of the app */
+.app-item-container .app-item-info .app-item-header .app-name {
+  font-size: 4rem;
+}
+
+/* The description of the app */
+.app-item-container .app-item-info .app-item-body {
+  font-size: 1.3rem;
+}

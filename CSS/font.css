@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+@font-face {
+  font-family: 'Long-Shot';
+  src:url('../Assets/fonts/LongShot/Long-Shot.ttf.woff') format('woff'),
+      url('../Assets/fonts/LongShot/Long-Shot.ttf.svg#Long-Shot') format('svg'),
+      url('../Assets/fonts/LongShot/Long-Shot.ttf.eot'),
+      url('../Assets/fonts/LongShot/Long-Shot.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-long-shot {
+  font-family: 'Long-Shot';
+}
+
+.font-exo-2 {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
