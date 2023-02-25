@@ -4,7 +4,7 @@
 @import url(./carousel.css);
 
 :root {
-  /* CSS HSL */
+  /* HSL */
   --electric-violet: hsla(273, 100%, 50%, 1);
   --dark-violet: hsla(281, 86%, 43%, 1);
   --tekhelet: hsla(258, 49%, 33%, 1);
@@ -15,16 +15,23 @@
   --russian-violet: hsla(263, 35%, 25%, 1);
   --school-bus-yellow: hsla(51, 100%, 50%, 1);
   --safety-orange: hsla(28, 100%, 50%, 1);
+  /* HEX */
   --white: #dfdfdf;
   --play-store-bg: #01875f;
   --apple-store-bg: #0088cc;
+  /* Lengths */
+  --wrapper-min-height: 100vh;
+  --text-container-max-width: 85ch;
+  --image-max-width: 35rem;
+  /* Border */
+  --border-small: .5em;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  -webkit-user-select: none; /* Safari */
+  -webkit-user-select: none; /* Safari/Opera/Chrome */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
@@ -35,18 +42,21 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: var(--wrapper-min-height);
   overflow-x: hidden;
+  color: var(--white);
+}
+
+a {
+  color: var(--white);
 }
 
 .wrapper {
-  min-height: 100vh;
+  min-height: var(--wrapper-min-height);
 }
 
 .section-title {
   position: relative;
-  font-size: 5rem;
-  color: #fff;
 }
 
 .section-title::before {
@@ -56,12 +66,27 @@ body {
   bottom: -0.1em;
   width: 100%;
   height: .05em;
-  background: #fff;
+  background: var(--white);
 }
 
 .text-container {
-  text-align: center;
-  max-width: 65ch;
+  width: min(var(--text-container-max-width), 80%);
+}
+
+.border-full-rounded {
+  border-radius: 50%;
+}
+
+.border-small {
+  border-radius: var(--border-small);
+}
+
+.bg-google-play {
+  background: var(--play-store-bg);
+}
+
+.bg-app-store {
+  background: var(--apple-store-bg);
 }
 
 footer {
@@ -71,9 +96,4 @@ footer {
   background: var(--dark-violet);
   padding: 2em;
   min-height: 4em;
-}
-
-footer .copyright-text {
-  color: #fff;
-  font-size: 1.3rem;
 }

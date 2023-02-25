@@ -7,7 +7,7 @@
 /* The element that contains the slides */
 .slides-container {
   display: flex;
-  height: 100vh;
+  height: var(--wrapper-min-height);
   overflow: hidden;
   scroll-behavior: smooth;
   list-style: none;
@@ -26,7 +26,6 @@
   height: 5rem;
   width: 5rem;
   border: solid .3rem var(--electric-violet);
-  border-radius: 50%;
   font-size: 3rem;
   cursor: pointer;
   opacity: 0.5;
@@ -36,8 +35,7 @@
 }
 
 /* The status of the button on a certain event */
-.slide-arrow:hover,
-.slide-arrow:focus {
+.slide-arrow:hover {
   opacity: 1;
   box-shadow: 0 0 1rem var(--electric-violet);
 }
@@ -67,7 +65,7 @@
   display: flex;
   gap: 2.5em;
   font-size: 1.5rem;
-  width: min(70%, 70rem);
+  width: min(70rem, 70%);
 }
 
 /* The different sections that represent the app */
@@ -76,7 +74,7 @@
   background: var(--oxford-blue);
   padding: 1em;
   border: solid .3em var(--electric-violet);;
-  border-radius: .2em;
+  border-radius: var(--border-small);
   box-shadow: inset 0 0 1em var(--electric-violet);
 }
 
@@ -90,7 +88,7 @@
 
 /* The logo of the app */
 .app-item-container .app-item-logo img {
-  border-radius: .25em;
+  border-radius: calc(var(--border-small) / 2);
 }
 
 /* The container that contains the title and the buttons container */
@@ -111,8 +109,7 @@
 .app-item-container .app-item-logo .store-buttons i {
   position: relative;
   padding: .5em .8em;
-  color: var(--white);
-  border-radius: .25em;
+  border-radius: calc(var(--border-small) / 2);
   transition: transform 100ms;
 }
 
@@ -123,23 +120,12 @@
 
 .app-item-container .app-item-logo .store-buttons i:hover:before {
   left: -3rem;
-  border-radius: .25em 0 0 .25em;
+  border-radius: calc(var(--border-small) / 2) 0 0 calc(var(--border-small) / 2);
 }
 
 /* Removing the a tag of the store buttons default propreties */
 .app-item-container .app-item-logo .store-buttons a {
   text-decoration: none;
-  color: var(--white);
-}
-
-/* The first button icon (Play Store) */
-.app-item-container .app-item-logo .store-buttons i:first-of-type {
-  background: var(--play-store-bg);
-}
-
-/* The second button icon (Apple Store) */
-.app-item-container .app-item-logo .store-buttons i:nth-of-type(2) {
-  background: var(--apple-store-bg);
 }
 
 /* The container that contains the name and the description of the app */
@@ -147,14 +133,4 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 1em;
-}
-
-/* The name of the app */
-.app-item-container .app-item-info .app-item-header .app-name {
-  font-size: 4rem;
-}
-
-/* The description of the app */
-.app-item-container .app-item-info .app-item-body {
-  font-size: 1.3rem;
 }

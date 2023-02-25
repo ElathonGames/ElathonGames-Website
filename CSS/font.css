@@ -12,6 +12,25 @@
   font-style: normal;
 }
 
+/* Font size */
+.font-extra-large {
+  font-size: 14rem;
+}
+
+.font-big {
+  font-size: 5rem;
+}
+
+.font-extra-medium {
+  font-size: 3rem;
+}
+
+.font-medium {
+  font-size: 1.3rem;
+}
+
+
+/* Font family */
 .font-long-shot {
   font-family: 'Long-Shot';
 }
@@ -26,4 +45,9 @@
 
 .font-orbitron {
   font-family: 'Orbitron', sans-serif;
+}
+
+/* Text alignement */
+.text-center {
+  text-align: center;
 }
