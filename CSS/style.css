@@ -2,6 +2,7 @@
 @import url(./animation.css);
 @import url(./custom.css);
 @import url(./carousel.css);
+@import url(./responsive.css);
 
 :root {
   /* HSL */

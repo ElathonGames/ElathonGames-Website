@@ -58,7 +58,7 @@
   width: 30px;
   height: 50px;
   margin-left: -15px;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
   border-radius: 50px;
   box-sizing: border-box;
 }
@@ -72,7 +72,7 @@
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 100%;
   -webkit-animation: scroll-button-animation 2s infinite;
   animation: scroll-button-animation 2s infinite;
@@ -169,12 +169,12 @@
 }
 
 /* The about-us ElathonGames logo wrapper */
-.owl-mascotte-wrapper {
+.owl-mascotte-image {
   width: min(var(--image-max-width), 80%);
 }
 
 /* The about-us ElathonGames logo image */
-.owl-mascotte-wrapper img {
+.owl-mascotte-image img {
   width: 80%;
   transform: scaleX(-1);
 }
